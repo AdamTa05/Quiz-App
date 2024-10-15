@@ -1,4 +1,4 @@
-<div id="question-container" class="mt-5 w-full">
+<div id="question-container" class="mt-5 w-full">         
     <form id="question-form" hx-post="{% url 'get-answer' %}" hx-target="#question-container" hx-swap="innerHTML">
         {% csrf_token %}
         <h2 id="heading-text" class="text-3xl text-orange-600 font-semibold text-center mb-4">
