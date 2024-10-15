@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start your quiz</title>
+  <script src="https://unpkg.com/htmx.org@1.9.10" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Load static files -->
+  {% load static %}
+  
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <style>
+    /* Custom Styling */
+    body {
+      color: #e18606; /* Set text color to orange */
+      background-image: url("{% static 'images/bg.jpg' %}"); /* Use static template tag for Django */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .app-name {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 2.5rem; /* Slightly smaller font size */
+      font-weight: bold;
+      color: #e18606;
+      text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7); /* Darker shadow for better visibility */
+    }
+    
+    /* Gradient background for header */
+    .header-gradient {
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)); /* Dark gradient overlay */
+      backdrop-filter: blur(5px); /* Blur effect for the background */
+      padding: 10px 20px; /* Adjust padding */
+      border-radius: 8px; /* Rounded corners */
+      display: inline-block; /* Make it fit the content */
+      margin-bottom: 20px; /* Space below the header */
+    }
+
+    .glow-on-hover {
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      background-color: #e18606; /* Set button background to orange */
+      color: white; /* Set button text to white */
+    }
+    .glow-on-hover:hover {
+      box-shadow: 0 5px 20px rgba(118, 75, 162, 0.6); /* More pronounced glow on hover */
+      background-color: #c07406; /* Darker orange on hover */
+    }
+    /* Additional styles for better readability */
+    h2, p {
+      color: #e18606; /* Ensure headings and paragraph text are orange */
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-center items-center">
+
+  <!-- Authentication Links -->
+  <nav class="absolute top-5 right-5 text-orange-500">
+    {% if user.is_authenticated %}
+      <span>Welcome, {{ user.username }}!</span>
+      <!-- Logout Form -->
+      <form method="POST" action="{% url 'logout' %}" style="display: inline;">
+        {% csrf_token %}
+        <button type="submit" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded">Logout</button>
+      </form>
+    {% else %}
+      <a href="{% url 'login' %}" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded">Login</a>
+      <a href="{% url 'signup' %}" class="ml-4 bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded">Sign Up</a>
+    {% endif %}
+  </nav>
+
+  <header class="absolute top-2 left-5 text-left"> <!-- Moved closer to the top -->
+    <div class="header-gradient"> <!-- Gradient background with blur -->
+      <h1 class="app-name">
+        <i class="bi bi-lightbulb-fill text-orange-600"></i> Quiz & Learn
+      </h1>
+    </div>
+  </header>
+
+  <!-- Quiz Form Container -->
+  <form id="topic-container" class="bg-gray-800 max-w-lg w-full p-8 rounded-lg shadow-xl space-y-6 transform hover:scale-105 transition-transform duration-300 ease-in-out mt-16"
+    hx-post="{% url 'get-questions' %}/start"> <!-- Ensure correct syntax for hx-post -->
+    {% csrf_token %}
+    <h2 id="heading-text" class="text-center text-orange-400 text-2xl font-semibold">
+      What would you like to learn about?
+    </h2>
+
+    <div id="topic-list" class="text-center">
+      <p class="text-orange-300 mb-4">Select a topic below:</p>
+
+      <ol class="list-none space-y-4 text-left">
+        {% for topic in topics %}
+        <li class="option flex items-center bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors duration-200 ease-in-out">
+          <input type="radio" class="form-radio text-purple-600 h-5 w-5" id="topic-{{ forloop.counter0 }}" value="{{ topic.id }}" name="quiz_id" required>
+          <label class="ml-3 text-orange-200 font-medium" for="topic-{{ forloop.counter0 }}">{{ topic.name }} ({{ topic.questions_count }} questions)</label>
+        </li>
+        {% endfor %}
+
+        {% if not topics %}
+        <li class="text-red-600">No topics available. Please add some topics.</li>
+        {% endif %}
+      </ol>
+    </div>
+
+    <div class="text-center">
+      <button class="glow-on-hover font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300 hover:bg-orange-700 focus:outline-none">
+        Start Your Quiz
+      </button>
+    </div>
+  </form>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Completion</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black font-sans">
+
+<div class="container mx-auto mt-10">
+    <div class="completion-container bg-gray-800 rounded-lg shadow-md p-8 text-center max-w-lg mx-auto">
+        <h2 class="text-3xl font-bold text-orange-500 mb-4">Quiz Complete!</h2>
+        <p class="score-info text-lg text-orange-300 mb-4">You scored {{ percent_score }}%</p>
+        <p class="text-orange-200">({{ score }} correct / {{ questions_count }} questions)</p>
+        
+        <!-- Tailwind button -->
+        <a class="mt-6 inline-block bg-orange-600 text-white text-lg font-semibold rounded-full px-6 py-3 hover:bg-orange-500 transition duration-300" href="{% url 'start' %}">
+            Start another quiz
+        </a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,855 @@
+---
+- model: sim.quiz
+  pk: 1
+  fields:
+    name: Python Quiz
+
+- model: sim.question
+  pk: 1
+  fields:
+    quiz: 1
+    text: What is the output of `print(type([]))` in Python?
+- model: sim.answer
+  pk: 1
+  fields:
+    question: 1
+    text: "<class 'list'>"
+    is_correct: true
+- model: sim.answer
+  pk: 2
+  fields:
+    question: 1
+    text: "<class 'dict'>"
+    is_correct: false
+- model: sim.answer
+  pk: 3
+  fields:
+    question: 1
+    text: "<class 'tuple'>"
+    is_correct: false
+- model: sim.answer
+  pk: 4
+  fields:
+    question: 1
+    text: "<class 'set'>"
+    is_correct: false
+
+- model: sim.question
+  pk: 2
+  fields:
+    quiz: 1
+    text: Which of the following is a mutable data type in Python?
+- model: sim.answer
+  pk: 5
+  fields:
+    question: 2
+    text: "list"
+    is_correct: true
+- model: sim.answer
+  pk: 6
+  fields:
+    question: 2
+    text: "tuple"
+    is_correct: false
+- model: sim.answer
+  pk: 7
+  fields:
+    question: 2
+    text: "str"
+    is_correct: false
+- model: sim.answer
+  pk: 8
+  fields:
+    question: 2
+    text: "frozenset"
+    is_correct: false
+
+- model: sim.question
+  pk: 3
+  fields:
+    quiz: 1
+    text: What keyword is used to define a function in Python?
+- model: sim.answer
+  pk: 9
+  fields:
+    question: 3
+    text: "def"
+    is_correct: true
+- model: sim.answer
+  pk: 10
+  fields:
+    question: 3
+    text: "function"
+    is_correct: false
+- model: sim.answer
+  pk: 11
+  fields:
+    question: 3
+    text: "define"
+    is_correct: false
+- model: sim.answer
+  pk: 12
+  fields:
+    question: 3
+    text: "fun"
+    is_correct: false
+
+- model: sim.question
+  pk: 4
+  fields:
+    quiz: 1
+    text: What is the output of `print(0.1 + 0.2 == 0.3)`?
+- model: sim.answer
+  pk: 13
+  fields:
+    question: 4
+    text: "True"
+    is_correct: false
+- model: sim.answer
+  pk: 14
+  fields:
+    question: 4
+    text: "False"
+    is_correct: true
+- model: sim.answer
+  pk: 15
+  fields:
+    question: 4
+    text: "None"
+    is_correct: false
+- model: sim.answer
+  pk: 16
+  fields:
+    question: 4
+    text: "0"
+    is_correct: false
+
+- model: sim.question
+  pk: 5
+  fields:
+    quiz: 1
+    text: How do you create a list in Python?
+- model: sim.answer
+  pk: 17
+  fields:
+    question: 5
+    text: "my_list = []"
+    is_correct: true
+- model: sim.answer
+  pk: 18
+  fields:
+    question: 5
+    text: "my_list = {}"
+    is_correct: false
+- model: sim.answer
+  pk: 19
+  fields:
+    question: 5
+    text: "my_list = ()"
+    is_correct: false
+- model: sim.answer
+  pk: 20
+  fields:
+    question: 5
+    text: "my_list = set()"
+    is_correct: false
+
+- model: sim.question
+  pk: 6
+  fields:
+    quiz: 1
+    text: Which statement will create a variable named "x" and assign it the value of 10?
+- model: sim.answer
+  pk: 21
+  fields:
+    question: 6
+    text: "x = 10"
+    is_correct: true
+- model: sim.answer
+  pk: 22
+  fields:
+    question: 6
+    text: "10 = x"
+    is_correct: false
+- model: sim.answer
+  pk: 23
+  fields:
+    question: 6
+    text: "let x = 10"
+    is_correct: false
+- model: sim.answer
+  pk: 24
+  fields:
+    question: 6
+    text: "x := 10"
+    is_correct: false
+
+- model: sim.question
+  pk: 7
+  fields:
+    quiz: 1
+    text: What will be the output of `len("Python")`?
+- model: sim.answer
+  pk: 25
+  fields:
+    question: 7
+    text: "6"
+    is_correct: true
+- model: sim.answer
+  pk: 26
+  fields:
+    question: 7
+    text: "7"
+    is_correct: false
+- model: sim.answer
+  pk: 27
+  fields:
+    question: 7
+    text: "5"
+    is_correct: false
+- model: sim.answer
+  pk: 28
+  fields:
+    question: 7
+    text: "None"
+    is_correct: false
+
+- model: sim.question
+  pk: 8
+  fields:
+    quiz: 1
+    text: What is a correct way to import a module named "math"?
+- model: sim.answer
+  pk: 29
+  fields:
+    question: 8
+    text: "import math"
+    is_correct: true
+- model: sim.answer
+  pk: 30
+  fields:
+    question: 8
+    text: "include math"
+    is_correct: false
+- model: sim.answer
+  pk: 31
+  fields:
+    question: 8
+    text: "using math"
+    is_correct: false
+- model: sim.answer
+  pk: 32
+  fields:
+    question: 8
+    text: "require math"
+    is_correct: false
+
+- model: sim.question
+  pk: 9
+  fields:
+    quiz: 1
+    text: Which method can be used to convert a string "123" to an integer in Python?
+- model: sim.answer
+  pk: 33
+  fields:
+    question: 9
+    text: "int('123')"
+    is_correct: true
+- model: sim.answer
+  pk: 34
+  fields:
+    question: 9
+    text: "str('123')"
+    is_correct: false
+- model: sim.answer
+  pk: 35
+  fields:
+    question: 9
+    text: "float('123')"
+    is_correct: false
+- model: sim.answer
+  pk: 36
+  fields:
+    question: 9
+    text: "convert('123')"
+    is_correct: false
+
+- model: sim.question
+  pk: 10
+  fields:
+    quiz: 1
+    text: What will `3**2` evaluate to in Python?
+- model: sim.answer
+  pk: 37
+  fields:
+    question: 10
+    text: "9"
+    is_correct: true
+- model: sim.answer
+  pk: 38
+  fields:
+    question: 10
+    text: "6"
+    is_correct: false
+- model: sim.answer
+  pk: 39
+  fields:
+    question: 10
+    text: "8"
+    is_correct: false
+- model: sim.answer
+  pk: 40
+  fields:
+    question: 10
+    text: "None"
+    is_correct: false
+
+- model: sim.quiz
+  pk: 2
+  fields:
+    name: JavaScript Quiz
+
+- model: sim.question
+  pk: 11
+  fields:
+    quiz: 2
+    text: What is the output of `console.log(typeof null)` in JavaScript?
+- model: sim.answer
+  pk: 41
+  fields:
+    question: 11
+    text: "object"
+    is_correct: true
+- model: sim.answer
+  pk: 42
+  fields:
+    question: 11
+    text: "null"
+    is_correct: false
+- model: sim.answer
+  pk: 43
+  fields:
+    question: 11
+    text: "undefined"
+    is_correct: false
+- model: sim.answer
+  pk: 44
+  fields:
+    question: 11
+    text: "string"
+    is_correct: false
+
+- model: sim.question
+  pk: 12
+  fields:
+    quiz: 2
+    text: Which of the following is a correct way to declare a variable in JavaScript?
+- model: sim.answer
+  pk: 45
+  fields:
+    question: 12
+    text: "let x = 5;"
+    is_correct: true
+- model: sim.answer
+  pk: 46
+  fields:
+    question: 12
+    text: "var x : 5;"
+    is_correct: false
+- model: sim.answer
+  pk: 47
+  fields:
+    question: 12
+    text: "const x = 5"
+    is_correct: false
+- model: sim.answer
+  pk: 48
+  fields:
+    question: 12
+    text: "x := 5;"
+    is_correct: false
+
+- model: sim.question
+  pk: 13
+  fields:
+    quiz: 2
+    text: What does NaN stand for in JavaScript?
+- model: sim.answer
+  pk: 49
+  fields:
+    question: 13
+    text: "Not a Number"
+    is_correct: true
+- model: sim.answer
+  pk: 50
+  fields:
+    question: 13
+    text: "Null and Not"
+    is_correct: false
+- model: sim.answer
+  pk: 51
+  fields:
+    question: 13
+    text: "Not a Name"
+    is_correct: false
+- model: sim.answer
+  pk: 52
+  fields:
+    question: 13
+    text: "Name and Number"
+    is_correct: false
+
+- model: sim.question
+  pk: 14
+  fields:
+    quiz: 2
+    text: Which of the following is used to define an anonymous function in JavaScript?
+- model: sim.answer
+  pk: 53
+  fields:
+    question: 14
+    text: "function() {}"
+    is_correct: true
+- model: sim.answer
+  pk: 54
+  fields:
+    question: 14
+    text: "func() {}"
+    is_correct: false
+- model: sim.answer
+  pk: 55
+  fields:
+    question: 14
+    text: "anonymous() {}"
+    is_correct: false
+- model: sim.answer
+  pk: 56
+  fields:
+    question: 14
+    text: "define() {}"
+    is_correct: false
+
+- model: sim.question
+  pk: 15
+  fields:
+    quiz: 2
+    text: What will `console.log(1 + '1')` output?
+- model: sim.answer
+  pk: 57
+  fields:
+    question: 15
+    text: "11"
+    is_correct: true
+- model: sim.answer
+  pk: 58
+  fields:
+    question: 15
+    text: "2"
+    is_correct: false
+- model: sim.answer
+  pk: 59
+  fields:
+    question: 15
+    text: "undefined"
+    is_correct: false
+- model: sim.answer
+  pk: 60
+  fields:
+    question: 15
+    text: "Error"
+    is_correct: false
+
+- model: sim.question
+  pk: 16
+  fields:
+    quiz: 2
+    text: How do you create an array in JavaScript?
+- model: sim.answer
+  pk: 61
+  fields:
+    question: 16
+    text: "let arr = [];"
+    is_correct: true
+- model: sim.answer
+  pk: 62
+  fields:
+    question: 16
+    text: "let arr = {};"
+    is_correct: false
+- model: sim.answer
+  pk: 63
+  fields:
+    question: 16
+    text: "let arr = ();"
+    is_correct: false
+- model: sim.answer
+  pk: 64
+  fields:
+    question: 16
+    text: "let arr = set();"
+    is_correct: false
+
+- model: sim.question
+  pk: 17
+  fields:
+    quiz: 2
+    text: What is the result of `typeof []` in JavaScript?
+- model: sim.answer
+  pk: 65
+  fields:
+    question: 17
+    text: "object"
+    is_correct: true
+- model: sim.answer
+  pk: 66
+  fields:
+    question: 17
+    text: "array"
+    is_correct: false
+- model: sim.answer
+  pk: 67
+  fields:
+    question: 17
+    text: "null"
+    is_correct: false
+- model: sim.answer
+  pk: 68
+  fields:
+    question: 17
+    text: "undefined"
+    is_correct: false
+
+- model: sim.question
+  pk: 18
+  fields:
+    quiz: 2
+    text: Which operator is used to assign a value to a variable in JavaScript?
+- model: sim.answer
+  pk: 69
+  fields:
+    question: 18
+    text: "="
+    is_correct: true
+- model: sim.answer
+  pk: 70
+  fields:
+    question: 18
+    text: ":="
+    is_correct: false
+- model: sim.answer
+  pk: 71
+  fields:
+    question: 18
+    text: "=>"
+    is_correct: false
+- model: sim.answer
+  pk: 72
+  fields:
+    question: 18
+    text: "=="
+    is_correct: false
+
+- model: sim.question
+  pk: 19
+  fields:
+    quiz: 2
+    text: What will `5 === '5'` evaluate to in JavaScript?
+- model: sim.answer
+  pk: 73
+  fields:
+    question: 19
+    text: "false"
+    is_correct: true
+- model: sim.answer
+  pk: 74
+  fields:
+    question: 19
+    text: "true"
+    is_correct: false
+- model: sim.answer
+  pk: 75
+  fields:
+    question: 19
+    text: "undefined"
+    is_correct: false
+- model: sim.answer
+  pk: 76
+  fields:
+    question: 19
+    text: "NaN"
+    is_correct: false
+
+- model: sim.question
+  pk: 20
+  fields:
+    quiz: 2
+    text: What is the output of `console.log('2' + 2)`?
+- model: sim.answer
+  pk: 77
+  fields:
+    question: 20
+    text: "22"
+    is_correct: true
+- model: sim.answer
+  pk: 78
+  fields:
+    question: 20
+    text: "4"
+    is_correct: false
+- model: sim.answer
+  pk: 79
+  fields:
+    question: 20
+    text: "Error"
+    is_correct: false
+- model: sim.answer
+  pk: 80
+  fields:
+    question: 20
+    text: "undefined"
+    is_correct: false
+
+- model: sim.quiz
+  pk: 3
+  fields:
+    name: C Programming Quiz
+
+- model: sim.question
+  pk: 21
+  fields:
+    quiz: 3
+    text: What is the output of `printf("%d", 5 + 3);` in C?
+- model: sim.answer
+  pk: 61
+  fields:
+    question: 21
+    text: "8"
+    is_correct: true
+- model: sim.answer
+  pk: 62
+  fields:
+    question: 21
+    text: "5 + 3"
+    is_correct: false
+- model: sim.answer
+  pk: 63
+  fields:
+    question: 21
+    text: "Error"
+    is_correct: false
+- model: sim.answer
+  pk: 64
+  fields:
+    question: 21
+    text: "None"
+    is_correct: false
+
+- model: sim.question
+  pk: 22
+  fields:
+    quiz: 3
+    text: Which of the following is the correct syntax to include a standard library in C?
+- model: sim.answer
+  pk: 65
+  fields:
+    question: 22
+    text: "#include <stdio.h>"
+    is_correct: true
+- model: sim.answer
+  pk: 66
+  fields:
+    question: 22
+    text: "import <stdio.h>"
+    is_correct: false
+- model: sim.answer
+  pk: 67
+  fields:
+    question: 22
+    text: "using stdio;"
+    is_correct: false
+- model: sim.answer
+  pk: 68
+  fields:
+    question: 22
+    text: "include <stdio>"
+    is_correct: false
+
+- model: sim.question
+  pk: 23
+  fields:
+    quiz: 3
+    text: What will be the output of the following code? `int a = 5; printf("%d", a++);`
+- model: sim.answer
+  pk: 69
+  fields:
+    question: 23
+    text: "5"
+    is_correct: true
+- model: sim.answer
+  pk: 70
+  fields:
+    question: 23
+    text: "6"
+    is_correct: false
+- model: sim.answer
+  pk: 71
+  fields:
+    question: 23
+    text: "Error"
+    is_correct: false
+- model: sim.answer
+  pk: 72
+  fields:
+    question: 23
+    text: "None"
+    is_correct: false
+
+- model: sim.question
+  pk: 24
+  fields:
+    quiz: 3
+    text: Which operator is used to access the members of a structure in C?
+- model: sim.answer
+  pk: 73
+  fields:
+    question: 24
+    text: "."
+    is_correct: true
+- model: sim.answer
+  pk: 74
+  fields:
+    question: 24
+    text: "->"
+    is_correct: false
+- model: sim.answer
+  pk: 75
+  fields:
+    question: 24
+    text: "&"
+    is_correct: false
+- model: sim.answer
+  pk: 76
+  fields:
+    question: 24
+    text: "[]"
+    is_correct: false
+
+- model: sim.question
+  pk: 25
+  fields:
+    quiz: 3
+    text: What is the default return type of a function in C if not specified?
+- model: sim.answer
+  pk: 77
+  fields:
+    question: 25
+    text: "int"
+    is_correct: true
+- model: sim.answer
+  pk: 78
+  fields:
+    question: 25
+    text: "void"
+    is_correct: false
+- model: sim.answer
+  pk: 79
+  fields:
+    question: 25
+    text: "float"
+    is_correct: false
+- model: sim.answer
+  pk: 80
+  fields:
+    question: 25
+    text: "char"
+    is_correct: false
+
+- model: sim.question
+  pk: 26
+  fields:
+    quiz: 3
+    text: Which of the following is used to dynamically allocate memory in C?
+- model: sim.answer
+  pk: 81
+  fields:
+    question: 26
+    text: "malloc()"
+    is_correct: true
+- model: sim.answer
+  pk: 82
+  fields:
+    question: 26
+    text: "alloc()"
+    is_correct: false
+- model: sim.answer
+  pk: 83
+  fields:
+    question: 26
+    text: "new()"
+    is_correct: false
+- model: sim.answer
+  pk: 84
+  fields:
+    question: 26
+    text: "calloc()"
+    is_correct: false
+
+- model: sim.question
+  pk: 27
+  fields:
+    quiz: 3
+    text: What is the purpose of the `return` statement in a function?
+- model: sim.answer
+  pk: 85
+  fields:
+    question: 27
+    text: "To exit the function and return a value"
+    is_correct: true
+- model: sim.answer
+  pk: 86
+  fields:
+    question: 27
+    text: "To define a variable"
+    is_correct: false
+- model: sim.answer
+  pk: 87
+  fields:
+    question: 27
+    text: "To loop through the function"
+    is_correct: false
+- model: sim.answer
+  pk: 88
+  fields:
+    question: 27
+    text: "To initialize the function"
+    is_correct: false
+
+- model: sim.question
+  pk: 28
+  fields:
+    quiz: 3
+    text: Which function is used to get the length of a string in C?
+- model: sim.answer
+  pk: 89
+  fields:
+    question: 28
+    text: "strlen()"
+    is_correct: true
+- model: sim.answer
+  pk: 90
+  fields:
+    question: 28
+    text: "size()"
+    is_correct: false
+- model: sim.answer
+  pk: 91
+  fields:
+    question: 28
+    text: "length()"
+    is_correct: false
+- model: sim.answer
+  pk: 92
+  fields:
+    question: 28
+    text: "count()"
+    is_correct: false
