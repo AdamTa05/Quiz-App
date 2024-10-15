@@ -9,7 +9,6 @@ Welcome to the **Quiz & Learn** application! This project is a web-based quiz pl
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshots](#screenshots)
-- [License](#license)
 
 ## Features
 
@@ -32,7 +31,7 @@ Welcome to the **Quiz & Learn** application! This project is a web-based quiz pl
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/YOUR_USERNAME/Quiz-App.git
+    git clone https://github.com/AdamTa05/Quiz-Learn.git
     ```
 2. Navigate into the project directory:
     ```bash
@@ -61,10 +60,6 @@ Welcome to the **Quiz & Learn** application! This project is a web-based quiz pl
 ## Screenshots
 
 ![Quiz App](path_to_screenshot)
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
