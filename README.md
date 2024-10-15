@@ -59,7 +59,7 @@ Welcome to the **Quiz & Learn** application! This project is a web-based quiz pl
 
 ## Screenshots
 
-![Quiz App](./static/images/Quiz-Screenshot.jpeg)   
+![Quiz App](./static/images/Quiz-Screenshot.jpeg)           
 
 ---
 
