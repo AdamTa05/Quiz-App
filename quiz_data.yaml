@@ -1,5 +1,5 @@
 ---
-- model: sim.quiz
+- model: sim.quiz   
   pk: 1
   fields:
     name: Python Quiz
