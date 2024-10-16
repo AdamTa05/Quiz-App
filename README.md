@@ -57,7 +57,7 @@ Welcome to the **Quiz & Learn** application! This project is a web-based quiz pl
 3. Choose a topic from the list to start your quiz.
 4. Answer questions and check your results!
 
-## Screenshots
+## Screenshot
 
 ![Quiz App](./static/images/Quiz-Screenshot.jpeg)           
 
