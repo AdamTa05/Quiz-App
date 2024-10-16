@@ -87,10 +87,10 @@
     </h2>
 
     <div id="topic-list" class="text-center">
-      <p class="text-orange-300 mb-4">Select a topic below:</p>
+      <p class="text-orange-300 mb-4">Select one of the topics below:</p>
 
       <ol class="list-none space-y-4 text-left">
-        {% for topic in topics %}
+        {% for topic in topics %}   
         <li class="option flex items-center bg-gray-700 p-3 rounded-lg hover:bg-gray-600 transition-colors duration-200 ease-in-out">
           <input type="radio" class="form-radio text-purple-600 h-5 w-5" id="topic-{{ forloop.counter0 }}" value="{{ topic.id }}" name="quiz_id" required>
           <label class="ml-3 text-orange-200 font-medium" for="topic-{{ forloop.counter0 }}">{{ topic.name }} ({{ topic.questions_count }} questions)</label>
