@@ -7,6 +7,7 @@ from django.db.models import Count
 from .models import Quiz, Question, Answer
 from django.core.paginator import Paginator
 from typing import Optional
+import random
 
 def signup(request):
     if request.method == 'POST':
