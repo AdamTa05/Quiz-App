@@ -24,9 +24,6 @@ def start_quiz_view(request) -> HttpResponse:
     request, 'start.html', context={'topics': topics}
   )
 
-
-import random  # Add this import at the top
-
 def get_questions(request, is_start=False) -> HttpResponse:
     if is_start:
         request = _reset_quiz(request)
@@ -59,7 +56,7 @@ def _get_subsequent_question(request) -> Optional[Question]:
     return Question.objects.filter(
       quiz_id=quiz_id, id__gt=previous_question_id
     ).order_by('id').first()
-  except Question.DoesNotExist:  # I.e., there are no more questions.
+  except Question.DoesNotExist:  
     return None
 
 
