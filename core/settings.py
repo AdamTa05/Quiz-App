@@ -114,12 +114,12 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
+# Static files
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
 
-# This tells Django where to find your static files (CSS, JavaScript, images, etc.)
+# This tells Django where to find your static files
 STATICFILES_DIRS = [BASE_DIR / 'static']  # Optional, if you have static files outside app directories
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # Where static files will be collected when you run collectstatic
